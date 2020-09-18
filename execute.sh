@@ -1,7 +1,11 @@
 #! /bin/bash
 
 init() {
+    LINK_PLAYLIST=https://www.youtube.com/playlist?list=PL1U-W-oJ5W8cZy3gvcN8ZTSJsELX3LY5W
+    rm ./input/*.*
+    rm ./output/*.*
     rm ./temp/*.*
+    youtube-dl -j --flat-playlist $LINK_PLAYLIST | jq -r '.id' | sed 's_^_https://youtu.be/_' > ./input/music_list_links.txt
 }
 
 download() {
