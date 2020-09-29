@@ -1,7 +1,8 @@
 #! /bin/bash
 
 init() {
-    LINK_PLAYLIST=https://www.youtube.com/playlist?list=PL1U-W-oJ5W8cZy3gvcN8ZTSJsELX3LY5W
+    echo "Qual o link da playlist?";
+    read LINK_PLAYLIST;
     rm ./input/*.*
     rm ./output/*.*
     rm ./temp/*.*
