@@ -7,4 +7,4 @@
 4. `cd youtube_downloader`
 5. `./execute.sh`
 6. Paste the link for the youtube playlist for do download in .mp3
-7. Wait the proccess terminate
+7. Wait for the proccess to finish
