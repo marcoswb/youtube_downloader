@@ -1,6 +1,18 @@
 #! /bin/bash
 
 init() {
+    if [ ! -d "./input" ]; then 
+        mkdir ./input
+    fi
+
+    if [ ! -d "./output" ]; then 
+        mkdir ./output
+    fi
+
+    if [ ! -d "./temp" ]; then 
+        mkdir ./temp
+    fi
+
     echo "Qual o link da playlist?";
     read LINK_PLAYLIST;
     rm ./input/*.*
@@ -12,7 +24,7 @@ init() {
 download() {
     while read line
     do
-    youtube-dl -f mp4 -o "~/Github/youtube_downloader/temp/%(title)s.%(ext)s" $line
+    youtube-dl -f mp4 -o "$(pwd)/temp/%(title)s.%(ext)s" $line
     done < ./input/music_list_links.txt
 }
 
