@@ -1,6 +1,6 @@
 # Youtube Downloader
 
-Script simples para converter suas playlists do youtube para formato .mp3
+Script para converter suas playlists do youtube para formato .mp3
 
 ### Passos para executar
 1. `git clone https://github.com/marcoswb/youtube_downloader.git`
